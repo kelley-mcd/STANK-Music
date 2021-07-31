@@ -10,11 +10,11 @@ function handleUserFormSubmit(event) {
   
 
   if (!searchInputVal) {
-    console.error('You need a search input value!');
+    alert('You need a search input value!');
     return;
   }
 
-  let queryString = `./user-form.html?q=${searchInput}`;
+  let queryString = `./user-form.html?q=${searchInputVal}`;
 
   location.assign(queryString);
 };
