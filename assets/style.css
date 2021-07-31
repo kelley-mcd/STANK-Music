@@ -1,7 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
 html, body {
   height: 100;
 }
 
 body {
   background-color: rgb(57, 57, 223);
+}
+
+.font {
+  font-family: 'Rock Salt', cursive;
+  font-size: 70px;
+  color: whitesmoke;
+  text-align: center;
+}
+
+.subtitle {
+  font-family: 'VT323', monospace;
+  font-size: 40px;
+  color: wheat;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.card-image {
+  width: 450px;
+  height: 260x;
+}
+
+.card {
+  width: 450px;
+  align-content: center;
 }
