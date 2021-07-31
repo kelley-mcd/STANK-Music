@@ -1,52 +1,29 @@
-const playlistTemplateSource = document.getElementById('playlist-template').innerHTML;
-const playlistTemplate = Handlebars.compile(playlistTemplateSource);
+const kanyeBtn$ = $('.kanye-btn');
+const userBtn$ = $('.user-btn');
+const userInput$ = $('.input-field');
 
-const tracksTemplateSource = document.getElementById('tracks-template').innerHTML;
-const tracksTemplate = Handlebars.compile(tracksTemplateSource);
 
-const $playlist = $('#playlist-container');
-const $tracks = $('#tracks-container');
-const $mainTitle = $('.header');
-const $backButton = $('.back-button');
+function handleUserFormSubmit(event) {
+  event.preventDefault();
 
-const getTopPlaylists = $.get('https://api.napster.com/v2.0/playlists?apikey=ZTk2YjY4MjMtMDAzYy00MTg4LWE2MjYtZDIzNjJmMmM0YTdm');
-
-function getPlaylistTracks(id) {
-  return $.get('https://api.napster.com/v2.0/playlists/' + id + '/tracks?apikey=ZTk2YjY4MjMtMDAzYy00MTg4LWE2MjYtZDIzNjJmMmM0YTdm&limit=200');
-}
-
-$backButton.click(() => {
-	$playlist.show();
-  $tracks.hide();
-  $mainTitle.text('Top Playlists');
-  $backButton.hide();
-});
-
-$backButton.hide(); // Initally hide back button.
-
-function changeToTracks(playlistName) {
-	$mainTitle.text(playlistName);
-  $playlist.hide();
-	$tracks.show();
-  $backButton.show();
+  var searchInputVal = userInput$.value;
   
-  return renderTracks;
-}
 
-function renderTracks(response) {
-  $tracks.html(tracksTemplate(response));
-}
+  if (!searchInputVal) {
+    console.error('You need a search input value!');
+    return;
+  }
 
-getTopPlaylists
-  .then((response) => {
-    $playlist.html(playlistTemplate(response));
-    addPlaylistListener();
-  });
+  let queryString = `./user-form.html?q=${searchInput}`;
 
-function addPlaylistListener() {
-  $('.cover').on('click', (e) => {
-    const $playlist = $(e.target);
-    getPlaylistTracks($playlist.data('playlistId'))
-      .then(changeToTracks($playlist.data('playlistName')));
-  });
-}
+  location.assign(queryString);
+};
+
+function handleKanyeButton(event) {
+  let queryString = "./kanye-decide.html";
+  location.assign(queryString);
+};
+
+userBtn$.click(handleUserFormSubmit);
+kanyeBtn$.click(handleKanyeButton);
+
