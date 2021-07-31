@@ -1,6 +1,6 @@
 const kanyeBtn$ = $('.kanye-btn');
 const userBtn$ = $('.user-btn');
-const userInput$ = $('.input-field');
+const userInput$ = $('select');
 
 
 function handleUserFormSubmit(event) {
@@ -27,3 +27,6 @@ function handleKanyeButton(event) {
 userBtn$.click(handleUserFormSubmit);
 kanyeBtn$.click(handleKanyeButton);
 
+$(document).ready(function(){
+  $('select').formSelect();
+});
