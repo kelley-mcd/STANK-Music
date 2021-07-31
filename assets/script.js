@@ -1,6 +1,6 @@
 const kanyeBtn$ = $('.kanye-btn');
 const userBtn$ = $('.user-btn');
-const userInput$ = $('.input-field');
+const userInput$ = $('select');
 
 
 function handleUserFormSubmit(event) {
@@ -10,11 +10,11 @@ function handleUserFormSubmit(event) {
   
 
   if (!searchInputVal) {
-    console.error('You need a search input value!');
+    alert('You need a search input value!');
     return;
   }
 
-  let queryString = `./user-form.html?q=${searchInput}`;
+  let queryString = `./user-form.html?q=${searchInputVal}`;
 
   location.assign(queryString);
 };
@@ -27,3 +27,6 @@ function handleKanyeButton(event) {
 userBtn$.click(handleUserFormSubmit);
 kanyeBtn$.click(handleKanyeButton);
 
+$(document).ready(function(){
+  $('select').formSelect();
+});
