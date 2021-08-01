@@ -43,8 +43,8 @@ $(function () {
           let options = data.genres[i].name;
           let genreId = data.genres[i].id;
           let genreObject = {
-            name : options,
-            id : genreId
+            name: options,
+            id: genreId
           }
           genreArray.push(genreObject);
         }
@@ -52,30 +52,23 @@ $(function () {
       })
   }
 
-
-
-
-
   // handlers for redirecting to the different results pages using the corresponding buttons
   function handleUserFormSubmit(event) {
     event.preventDefault();
 
-    
-    let inputVal = $('option').attr('value');
-
-
-    if (inputVal === undefined) {
+    let inputVal = $("select option:selected").val();
+    console.log(inputVal);
+    if (inputVal === "") {
       alert('You need a search input value!');
       return;
     }
     else {
+      console.log(inputVal);
       let queryString = `./user-form.html?q=${inputVal}`;
       location.assign(queryString);
     }
 
   };
-
-
 
   function handleKanyeButton(event) {
     event.preventDefault();
@@ -87,8 +80,20 @@ $(function () {
   kanyeBtn$.click(handleKanyeButton);
   handleRenderOptions();
   handleCreateArray();
+  //$('select').formSelect();
 
 });
+
+
+
+
+
+
+
+
+
+
+
 
 
 
