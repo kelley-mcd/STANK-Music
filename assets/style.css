@@ -38,3 +38,26 @@ body {
   width: 450px;
   align-content: center;
 }
+
+
+.quote-text{
+  font-family: 'VT323', monospace;
+  font-size: 35px;
+  color: black;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.kanye-decide-song {
+  font-family: 'VT323', monospace;
+  font-size: 25px;
+  color: midnightblue;
+}
+
+.backButton {
+  font-family: 'Rock Salt', cursive;
+  font-size: small;
+  background-color: navajowhite;
+  color: black;
+  
+}
