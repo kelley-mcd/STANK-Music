@@ -1,6 +1,7 @@
 const quoteField = $("#kanye-random-quote")
 const songField = $(".kanye-decide-song")
 let number = 0;
+let backButton = $(".backButton");
 let randomNumber = function () {
     number = Math.floor(Math.random() * 1566);
     return;
@@ -29,3 +30,7 @@ fetch(napsterURL)
     .then(function (data) {
         songField.text(data.tracks[0].name)
     })
+
+    function goBack() {
+        window.history.back();
+      }

@@ -38,3 +38,15 @@ body {
   width: 450px;
   align-content: center;
 }
+
+
+.quote-text{
+  font-family: 'VT323', monospace;
+  font-size: 25px;
+  color: black;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+
+
