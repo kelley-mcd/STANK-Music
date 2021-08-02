@@ -36,7 +36,11 @@ $(function () {
 
     }
     getParam();
-
+    function goBack() {
+        window.history.back();
+      }
+    
+    
 });
 
 
@@ -44,6 +48,3 @@ $(function () {
 
 
 
-function goBack() {
-    window.history.back();
-  }
