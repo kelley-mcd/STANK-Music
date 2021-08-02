@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 $(function () {
     const resultDiv = document.getElementById('user-choice-results');
     
@@ -45,8 +44,6 @@ $(function () {
 
 
 
-=======
 function goBack() {
     window.history.back();
   }
->>>>>>> a060d42d55756f73619ec2dbffce2594029ae6d3
