@@ -28,7 +28,8 @@ fetch(napsterURL)
         return response.json()
     })
     .then(function (data) {
-        songField.text(data.tracks[0].name)
+        songField.text(`${data.tracks[0].name} off the album: ${data.tracks[0].albumName}.`).attr("href",data.tracks[0].previewURL)
+        console.log(data);
     })
 
     function goBack() {
