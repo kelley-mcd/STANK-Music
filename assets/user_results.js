@@ -1,4 +1,5 @@
 $(function () {
+    const backButton = $('#back'); 
     const resultDiv = document.getElementById('user-choice-results');
     
     function getParam() {
@@ -36,9 +37,10 @@ $(function () {
 
     }
     getParam();
-    function goBack() {
+
+    backButton.click(function() {
         window.history.back();
-      }
+      })
     
     
 });
