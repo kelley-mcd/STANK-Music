@@ -6,7 +6,7 @@ html, body {
 }
 
 body {
-  background-color: rgb(57, 57, 223);
+  background-color: rgb(26, 26, 153);
 }
 
 .font {
@@ -35,6 +35,19 @@ body {
   margin: 0px auto;
 }
 
+.page-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: gray;
+  padding-top: 3px;
+}
+
+.white-text {
+  text-align: center;
+}
+
+/* kanye_result.js */
 .quote-text{
   font-family: 'VT323', monospace;
   font-size: 35px;
@@ -53,7 +66,11 @@ body {
   font-family: 'Rock Salt', cursive;
   font-size: small;
   background-color: navajowhite;
-  color: black; 
+  color: black;  
+}
+
+.backButton:hover {
+  cursor: pointer;
 }
 
 .backButton:hover {
