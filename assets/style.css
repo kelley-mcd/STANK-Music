@@ -32,6 +32,7 @@ body {
 .card {
   width: 80%;
   justify-content: center;
+  margin: 0px auto;
 }
 
 .quote-text{
