@@ -53,6 +53,9 @@ body {
   font-family: 'Rock Salt', cursive;
   font-size: small;
   background-color: navajowhite;
-  color: black;
-  
+  color: black;  
+}
+
+.backButton:hover {
+  cursor: pointer;
 }
