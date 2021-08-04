@@ -3,6 +3,7 @@ $(function () {
   const userBtn$ = $('.user-btn');
   //const userInput$ = $('input');
   const select$ = $('select');
+  const recentSearch = $("#recentSearch");
   let genreArray = [];
 
   // function to query the napster api and grab info on different genres, 
@@ -19,6 +20,7 @@ $(function () {
         for (var i = 0; i < data.genres.length; i++) {
           let options = data.genres[i].name;
           let genreId = data.genres[i].id;
+          genreArray = data.genres
           //console.log(options, genreId);
           let userOptions = document.createElement('option');
           userOptions.innerHTML = options;
@@ -30,26 +32,24 @@ $(function () {
   }
 
   // function to create array of key value pairs with name and id of genres
-  function handleCreateArray() {
-    let url = 'https://api.napster.com/v2.2/genres?apikey=OTI0NjE5NWEtNWVjOC00ZTJjLTliMDgtOTdkMTg5NjEwYmU0';
+  function displayLocalStorage() {
+    const userInput = JSON.parse(localStorage.getItem("Recent"));
+    if (userInput == "You let Kanye decide.") {
+      recentSearch.text("You let Kanye decide.")
+      recentSearch.on("click", function () {
+        
+        let queryString ="./kanye-decide.html";
+        location.assign(queryString);
+      })
+    }
+    else {
+      recentSearch.text(userInput.name)
+      recentSearch.on("click", function () {
 
-    fetch(url)
-      .then(function (response) {
-        return response.json();
+        let queryString = `./user-form.html?q=${userInput.val}`;
+        location.assign(queryString);
       })
-      .then(function (data) {
-        //console.log(data.genres);
-        for (var i = 0; i < data.genres.length; i++) {
-          let options = data.genres[i].name;
-          let genreId = data.genres[i].id;
-          let genreObject = {
-            name: options,
-            id: genreId
-          }
-          genreArray.push(genreObject);
-        }
-        console.log(genreArray);
-      })
+    }
   }
 
   // handlers for redirecting to the different results pages using the corresponding buttons
@@ -57,6 +57,10 @@ $(function () {
     event.preventDefault();
 
     let inputVal = $("select option:selected").val();
+    let userInput = {
+      name: $("select option:selected").html(),
+      val: inputVal
+    }
     console.log(inputVal);
     if (inputVal === "") {
       alert('You need a search input value!');
@@ -65,7 +69,7 @@ $(function () {
     else {
       console.log(inputVal);
       console.log($("select option:selected"))
-      localStorage.setItem("Recent", JSON.stringify($("select option:selected").html()))
+      localStorage.setItem("Recent", JSON.stringify(userInput))
       let queryString = `./user-form.html?q=${inputVal}`;
       location.assign(queryString);
     }
@@ -74,7 +78,7 @@ $(function () {
 
   function handleKanyeButton(event) {
     event.preventDefault();
-    localStorage.setItem("Recent", "You let Kanye decide.")
+    localStorage.setItem("Recent", JSON.stringify("You let Kanye decide."))
     let queryString = "./kanye-decide.html";
     location.assign(queryString);
   };
@@ -82,19 +86,13 @@ $(function () {
   userBtn$.click(handleUserFormSubmit);
   kanyeBtn$.click(handleKanyeButton);
   handleRenderOptions();
+  displayLocalStorage();
+
+
   //handleCreateArray();
   //$('select').formSelect();
 
 });
-
-
-
-
-
-
-
-
-
 
 
 
