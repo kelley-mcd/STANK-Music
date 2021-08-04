@@ -17,7 +17,7 @@ fetch("https://api.kanye.rest")
         return response.json()
     })
     .then(function (data) {
-        quoteField.text(data.quote);
+        quoteField.text(('"') +  data.quote + ('"'));
     })
 
 fetch(napsterURL)
