@@ -44,6 +44,7 @@ $(function () {
     }
     else {
       recentSearch.text(userInput.name)
+      recentSearch.addClass('show');
       recentSearch.on("click", function () {
 
         let queryString = `./user-form.html?q=${userInput.val}`;
