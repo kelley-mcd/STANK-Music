@@ -31,7 +31,7 @@ $(function () {
       })
   }
 
-  // function to create array of key value pairs with name and id of genres
+  //Function for displaying localStorage to viewport
   function displayLocalStorage() {
     const userInput = JSON.parse(localStorage.getItem("Recent"));
     if (userInput == "You let Kanye decide.") {
