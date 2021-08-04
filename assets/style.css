@@ -107,6 +107,14 @@ h5 {
     -moz-animation: glow 1s ease-in-out infinite alternate;
     animation: glow 1s ease-in-out infinite alternate;
   }
+
+  .hide {
+    display: none;
+  }
+  
+  .show {
+    display: block;
+  }
   
   @keyframes glow {
     from {
