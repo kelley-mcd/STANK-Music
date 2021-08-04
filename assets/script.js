@@ -59,7 +59,7 @@ $(function () {
     let inputVal = $("select option:selected").val();
     console.log(inputVal);
     if (inputVal === "") {
-      alert('You need a search input value!');
+      M.toast({html: 'Select a Genre!'});
       return;
     }
     else {

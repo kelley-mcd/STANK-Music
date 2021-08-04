@@ -25,10 +25,14 @@ $(function () {
                     for (i=0; i < data.tracks.length; i++) {
                         let artist = document.createElement('h5');
                         let track = document.createElement('p');
+                        let albumImg = document.createElement('a');
                         artist.textContent = data.tracks[i].artistName
                         track.textContent = data.tracks[i].name;
+                        albumImg.setAttribute('href', data.tracks[i].previewURL);
+                        albumImg.textContent = 'Preview';
                         resultDiv.append(artist);
                         resultDiv.append(track);
+                        resultDiv.append(albumImg);
 
                     }
 
