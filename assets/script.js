@@ -64,6 +64,8 @@ $(function () {
     }
     else {
       console.log(inputVal);
+      console.log($("select option:selected"))
+      localStorage.setItem("Recent", JSON.stringify($("select option:selected").html()))
       let queryString = `./user-form.html?q=${inputVal}`;
       location.assign(queryString);
     }
@@ -72,6 +74,7 @@ $(function () {
 
   function handleKanyeButton(event) {
     event.preventDefault();
+    localStorage.setItem("Recent", "You let Kanye decide.")
     let queryString = "./kanye-decide.html";
     location.assign(queryString);
   };
@@ -79,7 +82,7 @@ $(function () {
   userBtn$.click(handleUserFormSubmit);
   kanyeBtn$.click(handleKanyeButton);
   handleRenderOptions();
-  handleCreateArray();
+  //handleCreateArray();
   //$('select').formSelect();
 
 });

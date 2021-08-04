@@ -1,74 +1,118 @@
 @import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
-html, body {
-  height: 100;
-}
-
 body {
-  background-color: rgb(26, 26, 153);
+  background-color: #e0e0e0;
+  height: 100%;
 }
 
 .font {
-  font-family: 'Rock Salt', cursive;
-  font-size: 70px;
-  color: whitesmoke;
-  text-align: center;
+    font-family: 'Rock Salt', cursive;
+}
+
+.header {
+    font-size: 70px;
+    color: white;
+    text-align: center;
+    margin: 60px 0 60px 0;
+}
+
+h5 {
+    color: #ff80ab;
 }
 
 .subtitle {
-  font-family: 'VT323', monospace;
-  font-size: 40px;
-  color: wheat;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 30px;
   text-align: center;
+  padding: 7px 0px 7px 0px;
   margin-bottom: 50px;
 }
 
 .card-image {
   width: 100%;
-  height: 260x;
+}
+
+.image-2,
+.image-1 {
+  object-fit: cover;
+  width: 100%;
+  height: 200px;
 }
 
 .card {
   width: 80%;
   justify-content: center;
   margin: 0px auto;
+  height: 320px;
 }
 
 .page-footer {
-  position: absolute;
   bottom: 0;
   width: 100%;
-  background-color: gray;
-  padding-top: 3px;
-}
-
-.white-text {
+  padding: 0.5rem 0 0.5rem 0;
   text-align: center;
+  color: #ff80ab;
 }
 
 /* kanye_result.js */
 .quote-text{
   font-family: 'VT323', monospace;
   font-size: 35px;
-  color: black;
+  color: #ff80ab;
   text-align: center;
-  margin-bottom: 50px;
 }
 
 .kanye-decide-song {
   font-family: 'VT323', monospace;
   font-size: 25px;
-  color: midnightblue;
+  color: #0d47a1;
+}
+
+.kanye-btn {
+    font-family: 'Rock Salt', cursive;
+    width: 90%;
+    background-color: #ff80ab;
+}
+
+.user-btn {
+    font-family: 'Rock Salt', cursive;
+    width: 80%;
+    background-color: #ff80ab;
+}
+
+#user-choice-results {
+    color: #0d47a1;
 }
 
 .backButton {
   font-family: 'Rock Salt', cursive;
   font-size: small;
-  background-color: navajowhite;
-  color: black;  
+  background-color: #ff80ab;
+  color: whitesmoke;
+  width: 300px;
+  margin: 2rem 0 2rem 0;
 }
 
+.kanye-btn:hover,
+.user-btn:hover,
 .backButton:hover {
   cursor: pointer;
+  color: #ff80ab;
+  background-color: white;
 }
+
+.glow {
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+  }
+  
+  @-webkit-keyframes glow {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+    }
+    to {
+      text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+    }
+  }
