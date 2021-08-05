@@ -3,7 +3,7 @@ $(function () {
   const userBtn$ = $('.user-btn');
   const select$ = $('select');
   const recentSearch = $("#recentSearch");
-  let userInput = undefined;
+  const userInput = JSON.parse(localStorage.getItem("Recent")) || null;
   let genreArray = [];
 
   // function to query the napster api and grab info on different genres, 
@@ -33,7 +33,6 @@ $(function () {
 
   //Function for displaying localStorage to viewport
   function displayLocalStorage() {
-    userInput = JSON.parse(localStorage.getItem("Recent"));
     if (userInput == "You let Kanye decide.") {
       recentSearch.text("You let Kanye decide.")
       recentSearch.on("click", function () {
@@ -85,8 +84,8 @@ $(function () {
   userBtn$.click(handleUserFormSubmit);
   kanyeBtn$.click(handleKanyeButton);
   handleRenderOptions();
-
-  if (!userInput) {
+  
+  if (userInput) {
     displayLocalStorage();
     recentSearch.removeClass("hide");
     return;
