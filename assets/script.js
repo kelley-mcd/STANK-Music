@@ -61,7 +61,7 @@ $(function () {
     }
     console.log(inputVal);
     if (inputVal === "") {
-      M.toast({ html: 'Select a Genre!' });
+      M.toast({ html: 'Select a Genre!', classes: "red rounded"});//i stole the toast classes from your site Mike!  For some reason when I tried to do it it was breaking my code
       return;
     }
     else {
