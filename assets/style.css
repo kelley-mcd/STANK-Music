@@ -55,6 +55,11 @@ h5 {
   color: #ff80ab;
 }
 
+#recentSearch {
+  justify-content: center;
+  margin: 0px auto;
+}
+
 /* kanye_result.js */
 .quote-text{
   font-family: 'VT323', monospace;
@@ -79,6 +84,12 @@ h5 {
     font-family: 'Rock Salt', cursive;
     width: 80%;
     background-color: #ff80ab;
+}
+
+.saved-btn {
+  font-family: 'Rock Salt', cursive;
+  width: 30%;
+  background-color: #ff80ab;
 }
 
 #user-choice-results {
@@ -106,6 +117,14 @@ h5 {
     -webkit-animation: glow 1s ease-in-out infinite alternate;
     -moz-animation: glow 1s ease-in-out infinite alternate;
     animation: glow 1s ease-in-out infinite alternate;
+  }
+
+  .hide {
+    display: none;
+  }
+  
+  .show {
+    display: block;
   }
   
   @keyframes glow {
