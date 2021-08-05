@@ -1,9 +1,9 @@
 $(function () {
   const kanyeBtn$ = $('.kanye-btn');
   const userBtn$ = $('.user-btn');
-  //const userInput$ = $('input');
   const select$ = $('select');
   const recentSearch = $("#recentSearch");
+  let userInput = undefined;
   let genreArray = [];
 
   // function to query the napster api and grab info on different genres, 
@@ -33,7 +33,7 @@ $(function () {
 
   //Function for displaying localStorage to viewport
   function displayLocalStorage() {
-    const userInput = JSON.parse(localStorage.getItem("Recent"));
+    userInput = JSON.parse(localStorage.getItem("Recent"));
     if (userInput == "You let Kanye decide.") {
       recentSearch.text("You let Kanye decide.")
       recentSearch.on("click", function () {
@@ -44,9 +44,7 @@ $(function () {
     }
     else {
       recentSearch.text(userInput.name)
-      recentSearch.addClass('show');
       recentSearch.on("click", function () {
-
         let queryString = `./user-form.html?q=${userInput.val}`;
         location.assign(queryString);
       })
@@ -87,8 +85,15 @@ $(function () {
   userBtn$.click(handleUserFormSubmit);
   kanyeBtn$.click(handleKanyeButton);
   handleRenderOptions();
-  displayLocalStorage();
 
+  if (!userInput) {
+    displayLocalStorage();
+    recentSearch.removeClass("hide");
+    return;
+  }
+  else {
+    recentSearch.addClass("hide");
+  }
 
   //handleCreateArray();
   //$('select').formSelect();
