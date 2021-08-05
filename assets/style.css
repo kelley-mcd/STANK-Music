@@ -55,6 +55,11 @@ h5 {
   color: #ff80ab;
 }
 
+#recentSearch {
+  justify-content: center;
+  margin: 0px auto;
+}
+
 /* kanye_result.js */
 .quote-text{
   font-family: 'VT323', monospace;
