@@ -8,13 +8,14 @@ Github Page: https://github.com/kelley-mcd/STANK-Music
 In this project we will work together as a group to build an application that searches and displays results from the Napster and Kanye.rest APIs.
 
 # User Story
-
-AS A User who are looking for music to listen to
-I WANT a new way to either get a Kanye song recommendation or get a list of song for a specific Genre
+```
+AS A User I am interested in looking for music to listen to
+I WANT a new way to get a Kanye song suggestion or get a list of songs/artist for a specific Genre
 SO THAT I can minimize my time searching for a song and find my favorite music. 
+```
 
 # Acceptance Criteria
-
+```
 GIVEN I want a new way to find my favorite music,
 WHEN I navigate to the Homepage
 THEN I am presented with an option to get a Kanye's suggestion or select a Genre
@@ -26,11 +27,12 @@ WHEN I click on the Go Back button
 THEN I am taken back to the Homepage and a recent search history is shown
 When I click on the recent search button
 THEN I am taken back to the page I had chosen 
+```
 
 # Screenshot
 
 # Tools and API Used
-
+```
 Napster API- https://developer.napster.com/api/v2.2
 Kanye.rest API - https://github.com/ajzbc/kanye.rest
 Materialized - https://materializecss.com/
@@ -38,6 +40,7 @@ jQuery - https://code.jquery.com/
 Google Fonts - https://fonts.google.com/
 Trello - https://trello.com
 Lucid - https://www.lucidchart.com/
+```
 
 # a S.T.A.N.K collaboration
 
