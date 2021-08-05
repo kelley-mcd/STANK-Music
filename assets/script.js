@@ -37,8 +37,8 @@ $(function () {
     if (userInput == "You let Kanye decide.") {
       recentSearch.text("You let Kanye decide.")
       recentSearch.on("click", function () {
-        
-        let queryString ="./kanye-decide.html";
+
+        let queryString = "./kanye-decide.html";
         location.assign(queryString);
       })
     }
@@ -64,7 +64,7 @@ $(function () {
     }
     console.log(inputVal);
     if (inputVal === "") {
-      M.toast({html: 'Select a Genre!', classes: "red rounded"});//i stole the toast classes from your site Mike!  For some reason when I tried to do it it was breaking my code
+      M.toast({ html: 'Select a Genre!', classes: "red rounded"});//i stole the toast classes from your site Mike!  For some reason when I tried to do it it was breaking my code
       return;
     }
     else {

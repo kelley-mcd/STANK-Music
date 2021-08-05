@@ -36,11 +36,11 @@ fetch(napsterURL)
     //displays a random kanye song
     .then(function (data) {
         songField
-        .text(`${data.tracks[0].name} off the album: ${data.tracks[0].albumName}.`)
-        .attr("href",data.tracks[0].previewURL)
+            .text(`${data.tracks[0].name} off the album: ${data.tracks[0].albumName}.`)
+            .attr("href", data.tracks[0].previewURL)
     })
 
-    //allows user to go back to main page
-    backButton.on("click", function(){
-        window.history.back();
-      })
+//allows user to go back to main page
+backButton.on("click", function () {
+    window.history.back();
+})
