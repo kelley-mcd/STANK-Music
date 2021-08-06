@@ -20,16 +20,16 @@ GIVEN I want a new way to find my favorite music,
 WHEN I navigate to the Homepage
 THEN I am presented with an option to get a Kanye's suggestion or select a Genre
 WHEN I click the YE! button
-THEN I am presented with a picture of Kanye, a Kanye inspired quote, a Kanye Song and the Album the song is from
+THEN I am presented with a picture of Kanye, a Kanye inspired quote, 
+a Kanye Song and the Album the song is from
 WHEN I select a Genre and click on Let's Go!
-THEN I am presented with a sad Kanye picture and a list of song recommendation of other artist, along with a preview of each song
+THEN I am presented with a sad Kanye picture and a list of song recommendation 
+of other artist, along with a preview of each song
 WHEN I click on the Go Back button
 THEN I am taken back to the Homepage and a recent search history is shown
 When I click on the recent search button
 THEN I am taken back to the page I had chosen 
 ```
-
-# Screenshot
 
 # Tools and API Used
 ```
@@ -45,3 +45,22 @@ Lucid - https://www.lucidchart.com/
 # a S.T.A.N.K collaboration
 
 Collaboration between https://github.com/stevaniekanter, https://github.com/mrtbird539, https://github.com/AlexParker82, https://github.com/CIDoubleAgent, https://github.com/kelley-mcd
+
+# Screenshot of Application
+```
+Homepage
+
+![kan(way)e homepage](images/homepage.png)
+
+Kanye suggestion page
+
+![kanye's suggestion](images/kanye-suggestion.png)
+
+Choose a genre, artist and song suggestion page
+
+![genre suggestion](images/select-genre.png)
+
+Homepage with search history
+
+![homepage with search history](images/homepage-search-history.png)
+```
