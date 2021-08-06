@@ -47,7 +47,7 @@ Lucid - https://www.lucidchart.com/
 Collaboration between https://github.com/stevaniekanter, https://github.com/mrtbird539, https://github.com/AlexParker82, https://github.com/CIDoubleAgent, https://github.com/kelley-mcd
 
 # Screenshot of Application
-```
+
 Homepage
 
 ![kan(way)e homepage](images/homepage.png)
@@ -63,4 +63,3 @@ Choose a genre, artist and song suggestion page
 Homepage with search history
 
 ![homepage with search history](images/homepage-search-history.png)
-```
