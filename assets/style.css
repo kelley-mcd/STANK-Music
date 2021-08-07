@@ -69,6 +69,10 @@ h5 {
   margin: 0px auto;
 }
 
+.result-card {
+  height: fit-content;
+}
+
 /* kanye_result.js */
 .quote-text{
   font-family: 'VT323', monospace;
@@ -153,6 +157,9 @@ h5 {
     }
     .card-1 {
       margin-bottom: 130px;
+    }
+    .backButton {
+      width: 200px;
     }
   }
   @media only screen and (max-width: 380px) {
