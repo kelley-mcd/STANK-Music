@@ -35,7 +35,7 @@ THEN I am taken back to the page I had chosen
 ```
 Napster API- https://developer.napster.com/api/v2.2
 Kanye.rest API - https://github.com/ajzbc/kanye.rest
-Materialized - https://materializecss.com/
+Materialize - https://materializecss.com/
 jQuery - https://code.jquery.com/
 Google Fonts - https://fonts.google.com/
 Trello - https://trello.com
